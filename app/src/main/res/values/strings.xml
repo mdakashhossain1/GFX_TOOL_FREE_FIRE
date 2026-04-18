@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Final FF Tools</string>
+    <string name="privacy_policy_url">https://example.com/privacy-policy</string>
+    <string name="terms_conditions_url">https://example.com/terms-conditions</string>
+    <string name="contact_email">support@example.com</string>
+    <string name="help_support_url">https://example.com/help-support</string>
+    <string name="contact_us_url">https://example.com/contact-us</string>
+    <string name="discover_play_now">https://204.go.mglgamez.com</string>
+    <string name="play_now">https://204.go.mglgamez.co</string>
+
+</resources>

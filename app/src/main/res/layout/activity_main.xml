@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".activity.SplashActivity">
+
+    <ImageView
+        android:id="@+id/centerImage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo"
+        android:background="@drawable/rounded_corners" />
+
+    <TextView
+        android:id="@+id/privacyTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Privacy Policy | Terms &amp;Condition"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <CheckBox
+        android:id="@+id/agreementCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/privacyTerms"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="I agree to the Privacy Policy and Terms &amp; Conditions"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/startButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/agreementCheckBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_background"
+        android:text="START"
+        android:fontFamily="@font/lemon_milkmedium"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:letterSpacing="0.5" />
+
+</RelativeLayout>

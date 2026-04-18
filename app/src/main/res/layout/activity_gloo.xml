@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E6E5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:background="#33B5A3"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Back Icon -->
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/previous"
+                    android:layout_marginRight="12dp"
+                    android:contentDescription="Back Icon" />
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fast Gloo"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="optimization"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_corners"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textSize="15sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/gradient_background"
+                android:layout_marginBottom="16dp"
+                android:gravity="center">
+
+                <com.facebook.ads.NativeAdLayout
+                    android:id="@+id/nativeadgloo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <!-- Gloo Distance Slider -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="3dp">
+
+                    <!-- Label Text -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gloo Distance"
+                        android:textColor="#2B2B2B"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginEnd="8dp" />
+
+                    <!-- SeekBar -->
+                    <SeekBar
+                        android:id="@+id/gloo_distance_slider"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:max="10"
+                        android:progress="4"
+                        android:thumbTint="#FF9500"
+                        android:progressTint="#FF9500" />
+
+                    <!-- Value Text -->
+                    <TextView
+                        android:id="@+id/distance_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textColor="#2B2B2B"
+                        android:layout_marginStart="8dp"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+
+                <!-- Gloo Speed Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/gradient_card"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set Gloo Speed"
+                        android:textColor="#2B2B2B"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- RadioGroup for Gloo Speed -->
+                    <RadioGroup
+                        android:id="@+id/gloo_speed_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- 2X Speed -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/rounded_corners"
+                            android:padding="12dp"
+                            android:layout_marginBottom="8dp">
+
+                            <RadioButton
+                                android:id="@+id/speed_2x"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2X Speed"
+                                android:buttonTint="#33B5A3"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="#2B2B2B"
+                                android:textSize="14sp"
+                                android:fontFamily="sans-serif-medium" />
+                        </LinearLayout>
+
+                        <!-- 3X Speed -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/rounded_corners"
+                            android:padding="12dp"
+                            android:layout_marginBottom="8dp">
+
+                            <RadioButton
+                                android:id="@+id/speed_3x"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3X Speed"
+                                android:buttonTint="#33B5A3"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="#2B2B2B"
+                                android:textSize="14sp"
+                                android:fontFamily="sans-serif-medium" />
+                        </LinearLayout>
+
+                        <!-- 4X Speed -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/rounded_corners"
+                            android:padding="12dp">
+
+                            <RadioButton
+                                android:id="@+id/speed_4x"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4X Speed"
+                                android:buttonTint="#33B5A3"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="#2B2B2B"
+                                android:textSize="14sp"
+                                android:fontFamily="sans-serif-medium" />
+                        </LinearLayout>
+                    </RadioGroup>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_corners"
+                    android:padding="18dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="enable white gloo (FAst)"
+                        android:textAllCaps="true"
+                        android:textColor="#2B2B2B"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center_vertical" />
+
+                    <Switch
+                        android:id="@+id/switch_m1887"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumbTint="@color/switch_thumb_color"
+                        android:trackTint="@color/switch_track_color"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_corners"
+                    android:padding="18dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="switch clouch gloo"
+                        android:textColor="#2B2B2B"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center_vertical" />
+
+                    <Switch
+                        android:id="@+id/switch_scar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumbTint="@color/switch_thumb_color"
+                        android:trackTint="@color/switch_track_color"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/next_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button_background"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="16dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="set active"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="true"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/ubuntu_medium" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
